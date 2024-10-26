@@ -1,0 +1,103 @@
+<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<ion-content>
+<ion-title class="ion-text-center ion-padding">
+  <h1 class="title">Welcome to GimmeFood</h1>
+</ion-title>
+  <ion-row>
+    <ion-col size="4">
+      <ion-segment>
+        <ion-segment-button value="chef" routerLink="/loginchef">
+          <ion-label>Chef</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-col>
+    <ion-col size="4">
+      <ion-segment>
+        <ion-segment-button value="sponsor" routerLink="/loginsponsor" >
+          <ion-label>Sponsor</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-col>
+     <ion-col size="4">
+      <ion-segment>
+        <ion-segment-button value="Évaluateur " routerLink="/loginuser">
+          <ion-label>cuisinier </ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="4">
+      <img src="assets/images/image2.jpg" alt="Chef Image" style="width: 600px; height: 400px;" >
+    </ion-col>
+    <ion-col size="4">
+      <img src="assets/images/im2.jpg" alt="Sponsor Image" style="width: 600px; height: 400px;" >
+    </ion-col>
+     <ion-col size="4">
+      <img src="assets/images/im33.jpg" alt="Sponsor Image" style="width: 600px; height: 400px;" >
+    </ion-col>
+  </ion-row>
+</ion-content>-->
+<ion-header class="ion-no-border">
+ 
+</ion-header>
+
+<ion-content [fullscreen]="true" color="light">
+  <div class="main-header">
+    <div class="circular-image">
+      <img src="https://img.freepik.com/premium-photo/burger_938191-32.jpg" alt="Image circulaire">
+    </div>
+     <ion-label>Chef</ion-label>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-label>
+          <p>
+            
+          </p>
+        </ion-label>
+      </ion-col>
+      
+    </ion-row>
+
+    <ion-row class="ion-margin-horizontal ion-margin-top">
+      <ion-col>
+        <ion-label color="light">
+          <b style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Welcome to GimmeFood</b>
+        </ion-label>
+      </ion-col>
+    </ion-row>
+
+    
+  </ion-grid>
+
+
+    <ion-item lines="none" style="height: 100px;display: flex; align-items: center;margin-top: 50px;margin-left: 30px;" >
+  <img src="assets/images/image2.jpg" alt="Image circulaire" style="width: 70px; height: 70px;">
+  <h3 style="margin: 0;margin-left: 30px;color: rgb(13, 120, 214);">Chef</h3>
+  <ion-icon name="chevron-forward" slot="end" value="chef" routerLink="/loginchef"></ion-icon>
+   </ion-item>
+    
+
+<ion-item lines="none" style="height: 100px;display: flex; align-items: center;margin-left: 30px;" >
+  <img src="assets/images/im2.jpg" alt="Image circulaire" style="width: 70px; height: 70px;">
+  <h3 style="margin: 0;margin-left: 30px;color: rgb(13, 120, 214);">Sponsor</h3>
+  <ion-icon name="chevron-forward" slot="end" value="sponsor" routerLink="/loginsponsor" ></ion-icon>
+   </ion-item>
+    
+
+
+   
+    <ion-item lines="none" style="height: 100px;display: flex; align-items: center;margin-left: 30px;" >
+  <img src="assets/images/im33.jpg" alt="Image circulaire" style="width: 70px; height: 70px;">
+  <h3 style="margin: 0;margin-left: 30px;color: rgb(13, 120, 214);">Cuisinier</h3>
+  <ion-icon name="chevron-forward" slot="end" value="Évaluateur " routerLink="/loginuser"></ion-icon>
+   </ion-item>
+    
+
+    
+    
+</ion-content>

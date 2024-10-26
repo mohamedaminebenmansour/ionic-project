@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ajouter une compétition</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Nom de la compétition</ion-label>
+      <ion-input [(ngModel)]="newCompetition.name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Date de début</ion-label>
+      <ion-datetime [(ngModel)]="newCompetition.startDate"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Date de fin</ion-label>
+      <ion-datetime [(ngModel)]="newCompetition.endDate"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Description</ion-label>
+      <ion-textarea [(ngModel)]="newCompetition.description"></ion-textarea>
+    </ion-item>
+
+
+
+  </ion-list>
+
+  <ion-button expand="full" (click)="addCompetition()">Ajouter la compétition</ion-button>
+</ion-content>

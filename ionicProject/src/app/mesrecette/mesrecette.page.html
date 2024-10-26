@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ username }} Cuisine - Mes Recettes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Afficher les recettes filtrées par le nom d'utilisateur -->
+  <ion-list>
+    <ion-item *ngFor="let recipe of myRecipes">
+      <!-- Afficher les détails de la recette -->
+      <ion-thumbnail slot="start">
+        <img [src]="recipe.image" alt="Image de la recette" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ recipe.title }}</h2>
+        <p>{{ recipe.description }}</p>
+        <p>Produit: {{ recipe.product }}</p>
+        <p>Chef: {{ recipe.username }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

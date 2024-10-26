@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ username }} Cuisine</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <ion-list [inset]="true">
+   
+    <ion-item routerLink="/recipelist">
+      <ion-label>toutes les recettes</ion-label>
+    </ion-item>
+
+     <ion-item (click)="launchCompetition()">
+      <ion-label>Lancer une compétition</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label routerLink="/home">se déconnecter</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

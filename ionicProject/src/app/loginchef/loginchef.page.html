@@ -1,0 +1,78 @@
+<!--<ion-header>
+  <ion-toolbar>
+    <ion-title>Connexion Chef</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Nom d'utilisateur</ion-label>
+      <ion-input [(ngModel)]="username" type="text" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Mot de passe</ion-label>
+      <ion-input [(ngModel)]="password" type="password" required></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="full" (click)="login()">Se connecter</ion-button>
+</ion-content>-->
+<ion-content>
+  <form>
+    <ion-list lines="none" class="text">
+      <div style="text-align: center">
+        <div class="container">
+          <img
+            src="https://previews.123rf.com/images/clairev/clairev1208/clairev120800012/15191216-chef-theme-image-2-vector-illustration.jpg"
+            style="width: 100px; height: 100px"
+          />
+        </div>
+      </div>
+
+      <h1
+        style="
+          color: rgb(82, 146, 241);
+          font-weight: bold;
+          text-align: center;
+          margin-top: 10px;
+        "
+      >
+        Sign Up!
+      </h1>
+    </ion-list>
+    <ion-list lines="none" class="ion-margin ion-padding ion-text-center">
+      <ion-item class="ion-margin-vertical">
+        <ion-icon name="person-outline" slot="end" color="medium"> </ion-icon>
+        <ion-input
+          [(ngModel)]="username"  name="username"
+          type="text"
+          required
+          placeholder="Enter Username"
+        >
+        </ion-input>
+      </ion-item>
+      <ion-item class="ion-margin-vertical">
+        <ion-icon name="lock-closed" slot="end" color="medium"> </ion-icon>
+        <ion-input
+          [(ngModel)]="password"  name="password"
+          type="password"
+          required
+          placeholder="Enter Password"
+        >
+        </ion-input>
+      </ion-item>
+
+      <ion-row class="ion-margin-vertical">
+        <ion-col size="12" class="alignItems">
+          <div>
+            <ion-checkbox></ion-checkbox>
+            <ion-note>I accept the policy and terms</ion-note>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-button color="primary" shape="round" (click)="login()"
+        >Sign Up</ion-button
+      >
+    </ion-list>
+  </form>
+</ion-content>

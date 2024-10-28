@@ -33,6 +33,7 @@ export class AddrecipePage implements OnInit {
   }
 
   addRecipe() {
+    this.newRecipe.id= new Date().getTime().toString();
     this.newRecipe.username=this.username;
     this.recipeService.addRecipe(this.newRecipe);
     // Réinitialisez le formulaire

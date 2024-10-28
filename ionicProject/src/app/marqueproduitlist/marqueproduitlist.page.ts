@@ -15,4 +15,9 @@ export class MarqueproduitlistPage implements OnInit {
     // Charger la liste des Marqueproduits depuis le service
     this.marqueproduits = this.marqueproduitService.getMarqueproduits();
   }
+
+  selectMarqueproduit(id: number) {
+    console.log("Selected Marqueproduit ID:", id);
+    // Perform further actions here with the selected id, if needed.
+  }
 }

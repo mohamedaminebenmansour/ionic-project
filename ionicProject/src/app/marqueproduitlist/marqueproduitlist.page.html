@@ -6,7 +6,7 @@
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let marqueproduit of marqueproduits">
+    <ion-item *ngFor="let marqueproduit of marqueproduits" (click)="selectMarqueproduit(marqueproduit.id)">
       <ion-thumbnail slot="start">
         <img [src]="marqueproduit.image" alt="Image du Marqueproduit" />
       </ion-thumbnail>
@@ -17,4 +17,3 @@
     </ion-item>
   </ion-list>
 </ion-content>
-

@@ -8,6 +8,9 @@ import { PopoverController } from '@ionic/angular';
   styleUrls: ['./recipelist.page.scss'],
 })
 export class RecipelistPage implements OnInit {
+deleteRecipe(_t14: number) {
+throw new Error('Method not implemented.');
+}
   recipes: Array<any> = [];
 
   constructor(

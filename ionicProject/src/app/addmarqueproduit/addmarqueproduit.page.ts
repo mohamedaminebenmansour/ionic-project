@@ -30,6 +30,7 @@ export class AddmarqueproduitPage implements OnInit {
   }
 
   addMarqueproduit() {
+    this.newMarqueproduit.id= new Date().getTime().toString();
     this.marqueproduitService.addMarqueproduit(this.newMarqueproduit);
     this.newMarqueproduit = {};
     this.router.navigate(['/marqueproduitlist']);

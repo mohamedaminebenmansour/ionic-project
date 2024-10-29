@@ -1,37 +1,44 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Ajouter une recette</ion-title>
+    <ion-title>{{ newRecipe.id ? 'Modifier la recette' : 'Ajouter une recette' }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-   
-    <!-- Champ masqué pour le username -->
-    <ion-item>
-      <ion-label position="floating" [hidden]="true"></ion-label>
-      <ion-input [(ngModel)]="newRecipe.username" [hidden]="true"></ion-input>
+    <!-- Hidden item for the username -->
+    <ion-item style="display: none;"> <!-- Use CSS to hide -->
+      <ion-input [(ngModel)]="newRecipe.username"></ion-input>
     </ion-item>
 
-    <!-- Reste du formulaire -->
+    <!-- Form Fields -->
     <ion-item>
       <ion-label position="floating">Titre</ion-label>
-      <ion-input [(ngModel)]="newRecipe.title"></ion-input>
+      <ion-input [(ngModel)]="newRecipe.title" required></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Description</ion-label>
-      <ion-textarea [(ngModel)]="newRecipe.description"></ion-textarea>
+      <ion-textarea [(ngModel)]="newRecipe.description" required></ion-textarea>
     </ion-item>
+
     <ion-item>
       <ion-label position="floating">Produit</ion-label>
-      <ion-input [(ngModel)]="newRecipe.product"></ion-input>
+      <ion-input [(ngModel)]="newRecipe.product" required></ion-input>
     </ion-item>
+
     <ion-item>
       <ion-label position="stacked">Image</ion-label>
       <input type="file" (change)="onFileSelected($event)" accept="image/*" />
     </ion-item>
+
+    <!-- Display a thumbnail preview if an image is selected -->
+    <ion-thumbnail *ngIf="newRecipe.image">
+      <img [src]="newRecipe.image" />
+    </ion-thumbnail>
   </ion-list>
 
-  <ion-button expand="full" (click)="addRecipe()">Ajouter la recette</ion-button>
+  <ion-button expand="full" (click)="saveRecipe()">
+    {{ newRecipe.id ? 'Mettre à jour la recette' : 'Ajouter la recette' }}
+  </ion-button>
 </ion-content>

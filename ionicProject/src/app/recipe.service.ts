@@ -8,7 +8,7 @@ export class RecipeService {
   private recipes: Array<any> = [];
 
   constructor() {
-    // Charger les recettes depuis le stockage local au démarrage du service
+    // Load recipes from local storage when the service is initialized
     const storedRecipes = localStorage.getItem(this.RECIPES_KEY);
     if (storedRecipes) {
       this.recipes = JSON.parse(storedRecipes);
@@ -16,13 +16,14 @@ export class RecipeService {
   }
 
   private saveRecipesToLocalStorage() {
-    // Enregistrer les recettes dans le stockage local
+    // Save recipes to local storage
     localStorage.setItem(this.RECIPES_KEY, JSON.stringify(this.recipes));
   }
 
   addRecipe(recipe: any) {
+    recipe.id = new Date().getTime(); // Generate a unique ID based on timestamp
     this.recipes.push(recipe);
-    this.saveRecipesToLocalStorage(); // Sauvegarder les recettes dans le stockage local
+    this.saveRecipesToLocalStorage(); // Save updated recipes
   }
 
   getRecipes() {
@@ -30,7 +31,18 @@ export class RecipeService {
   }
 
   getRecipesByUsername(username: string): Array<any> {
-  
     return this.recipes.filter((recipe) => recipe.username === username);
+  }
+
+  updateRecipe(updatedRecipe: any) {
+    this.recipes = this.recipes.map(recipe =>
+      recipe.id === updatedRecipe.id ? updatedRecipe : recipe
+    );
+    this.saveRecipesToLocalStorage(); // Save changes to local storage
+  }
+
+  deleteRecipe(recipeId: number) {
+    this.recipes = this.recipes.filter(recipe => recipe.id !== recipeId);
+    this.saveRecipesToLocalStorage(); // Save changes to local storage
   }
 }

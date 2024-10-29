@@ -8,7 +8,6 @@
   <!-- Afficher les recettes filtrées par le nom d'utilisateur -->
   <ion-list>
     <ion-item *ngFor="let recipe of myRecipes">
-      <!-- Afficher les détails de la recette -->
       <ion-thumbnail slot="start">
         <img [src]="recipe.image" alt="Image de la recette" />
       </ion-thumbnail>
@@ -18,6 +17,15 @@
         <p>Produit: {{ recipe.product }}</p>
         <p>Chef: {{ recipe.username }}</p>
       </ion-label>
+      <!-- Update and Delete Icons -->
+      <ion-buttons slot="end">
+        <ion-button color="primary" (click)="updateRecipe(recipe)">
+          <ion-icon name="create-outline"></ion-icon>
+        </ion-button>
+        <ion-button color="danger" (click)="deleteRecipe(recipe.id)">
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
     </ion-item>
   </ion-list>
 </ion-content>

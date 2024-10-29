@@ -70,6 +70,7 @@ const routes: Routes = [
     path: 'competitionlist',
     loadChildren: () => import('./competitionlist/competitionlist.module').then( m => m.CompetitionlistPageModule)
   },
+  
 
 
   

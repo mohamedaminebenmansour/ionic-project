@@ -15,4 +15,7 @@ export class LoginchefPage {
   login() {
     this.router.navigate(['/chefhome', { username: this.username }]);
   }
+  signUp(){
+    this.router.navigate(['/signupchef']);
+  }
 }

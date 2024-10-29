@@ -24,41 +24,28 @@
         <div class="container">
           <img
             src="https://previews.123rf.com/images/clairev/clairev1208/clairev120800012/15191216-chef-theme-image-2-vector-illustration.jpg"
-            style="width: 100px; height: 100px"
-          />
+            style="width: 100px; height: 100px" />
         </div>
       </div>
 
-      <h1
-        style="
+      <h1 style="
           color: rgb(82, 146, 241);
           font-weight: bold;
           text-align: center;
           margin-top: 10px;
-        "
-      >
+        ">
         Sign Up!
       </h1>
     </ion-list>
     <ion-list lines="none" class="ion-margin ion-padding ion-text-center">
       <ion-item class="ion-margin-vertical">
         <ion-icon name="person-outline" slot="end" color="medium"> </ion-icon>
-        <ion-input
-          [(ngModel)]="username"  name="username"
-          type="text"
-          required
-          placeholder="Enter Username"
-        >
+        <ion-input [(ngModel)]="username" name="username" type="text" required placeholder="Enter Username">
         </ion-input>
       </ion-item>
       <ion-item class="ion-margin-vertical">
         <ion-icon name="lock-closed" slot="end" color="medium"> </ion-icon>
-        <ion-input
-          [(ngModel)]="password"  name="password"
-          type="password"
-          required
-          placeholder="Enter Password"
-        >
+        <ion-input [(ngModel)]="password" name="password" type="password" required placeholder="Enter Password">
         </ion-input>
       </ion-item>
 
@@ -70,9 +57,7 @@
           </div>
         </ion-col>
       </ion-row>
-      <ion-button color="primary" shape="round" (click)="login()"
-        >Sign Up</ion-button
-      >
+      <ion-button color="primary" shape="round" (click)="login()">Sign Up</ion-button>
     </ion-list>
   </form>
 </ion-content>
